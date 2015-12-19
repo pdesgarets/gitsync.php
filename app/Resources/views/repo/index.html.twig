@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Repo list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Fromurl</th>
+                <th>Tourl</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for repo in repos %}
+            <tr>
+                <td><a href="{{ path('repo_show', { 'id': repo.id }) }}">{{ repo.id }}</a></td>
+                <td>{{ repo.name }}</td>
+                <td>{{ repo.fromUrl }}</td>
+                <td>{{ repo.toUrl }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('repo_show', { 'id': repo.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('repo_edit', { 'id': repo.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('repo_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
