@@ -2,31 +2,45 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Repo
+ *
+ * @ORM\Table(name="repo")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\RepoRepository")
  */
 class Repo
 {
-    /**
-     * @var int
+    /** 
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
-    /**
+    /** 
      * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;
 
-    /**
+    /** 
      * @var string
+     *
+     * @ORM\Column(name="from_url", type="string", length=255)
      */
     private $fromUrl;
 
-    /**
+    /** 
      * @var string
+     *
+     * @ORM\Column(name="to_url", type="string", length=255)
      */
     private $toUrl;
-
 
     /**
      * Get id
