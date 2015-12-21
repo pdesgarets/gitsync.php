@@ -4,9 +4,32 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cd394eb4a75a9f76360363ed05e6bddd",
-    "content-hash": "635d4fe74a071d24fd34d0e63aa1e909",
+    "hash": "e53c8200feb248a794b2569406ebcdea",
+    "content-hash": "bf2a6d390738d7aa989a2ad8cf6e5348",
     "packages": [
+        {
+            "name": "coyl/git",
+            "version": "0.1.4.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coyl/git.git",
+                "reference": "19a5830d68bbed8f63e52d22040d767198989724"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coyl/git/zipball/19a5830d68bbed8f63e52d22040d767198989724",
+                "reference": "19a5830d68bbed8f63e52d22040d767198989724",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Git.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2015-09-10 16:13:00"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
