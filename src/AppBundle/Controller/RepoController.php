@@ -42,7 +42,7 @@ class RepoController extends Controller
     public function newAction(Request $request)
     {
         $repo = new Repo();
-        $form = $this->createForm( 'AppBundle\Form\RepoType', $repo);
+        $form = $this->createForm( RepoType::class, $repo);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -84,7 +84,7 @@ class RepoController extends Controller
     public function editAction(Request $request, Repo $repo)
     {
         $deleteForm = $this->createDeleteForm($repo);
-        $editForm = $this->createForm(new RepoType(), $repo);
+        $editForm = $this->createForm(RepoType::class, $repo);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

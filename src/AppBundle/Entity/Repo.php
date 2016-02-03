@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -24,6 +25,7 @@ class Repo
     /** 
      * @var string
      *
+     * @Assert\Regex("/[\w_.-]/")
      * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;

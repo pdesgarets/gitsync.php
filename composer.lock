@@ -4,31 +4,114 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e53c8200feb248a794b2569406ebcdea",
-    "content-hash": "bf2a6d390738d7aa989a2ad8cf6e5348",
+    "hash": "f26ad264b7fa630650967629c1088d80",
+    "content-hash": "f6c836fdf9919045c5253568f6a84f5e",
     "packages": [
         {
-            "name": "coyl/git",
-            "version": "0.1.4.13",
+            "name": "cocur/slugify",
+            "version": "v1.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/coyl/git.git",
-                "reference": "19a5830d68bbed8f63e52d22040d767198989724"
+                "url": "https://github.com/cocur/slugify.git",
+                "reference": "05f00fa75f1c53edfcf4d0425e7e62e95b8888dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/coyl/git/zipball/19a5830d68bbed8f63e52d22040d767198989724",
-                "reference": "19a5830d68bbed8f63e52d22040d767198989724",
+                "url": "https://api.github.com/repos/cocur/slugify/zipball/05f00fa75f1c53edfcf4d0425e7e62e95b8888dd",
+                "reference": "05f00fa75f1c53edfcf4d0425e7e62e95b8888dd",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "laravel/framework": "~4.1",
+                "latte/latte": "~2.2",
+                "mockery/mockery": "~0.9",
+                "nette/di": "~2.2",
+                "phpunit/phpunit": "~4.6",
+                "plumphp/plum": "~0.1",
+                "sami/sami": "~1.3",
+                "satooshi/php-coveralls": "0.6.*",
+                "silex/silex": "~1.2",
+                "symfony/dependency-injection": "~2.4",
+                "symfony/http-kernel": "~2.4",
+                "twig/twig": "~1",
+                "zendframework/zend-modulemanager": "~2.2",
+                "zendframework/zend-servicemanager": "~2.2",
+                "zendframework/zend-view": "~2.2"
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "Git.php"
-                ]
+                "psr-4": {
+                    "Cocur\\Slugify\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2015-09-10 16:13:00"
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivo Bathke",
+                    "email": "ivo.bathke@gmail.com"
+                },
+                {
+                    "name": "Florian Eckerstorfer",
+                    "email": "florian@eckerstorfer.co",
+                    "homepage": "https://florian.ec"
+                }
+            ],
+            "description": "Converts a string into a slug.",
+            "keywords": [
+                "slug",
+                "slugify"
+            ],
+            "time": "2015-09-29 18:26:32"
+        },
+        {
+            "name": "coyl/git",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coyl/git.git",
+                "reference": "c8548afd9d948c214a39e752b2710ab64a63ce87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coyl/git/zipball/c8548afd9d948c214a39e752b2710ab64a63ce87",
+                "reference": "c8548afd9d948c214a39e752b2710ab64a63ce87",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Vasil coylOne Kulakov",
+                    "email": "iam@vasiliy.pro",
+                    "homepage": "http://github.com/coyl"
+                }
+            ],
+            "description": "PHP library for manipulations on git repository. Based on kbjr/Git.php and it's forks",
+            "homepage": "https://github.com/coyl/Git.php",
+            "keywords": [
+                "git",
+                "git-client",
+                "php-git"
+            ],
+            "time": "2015-12-09 22:02:10"
         },
         {
             "name": "doctrine/annotations",
@@ -2085,7 +2168,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "coyl/git": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
